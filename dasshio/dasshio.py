@@ -158,7 +158,7 @@ while True:
     logger.info("Starting sniffing...")
     try:
         sniff(stop_filter=arp_display,
-              filter="arp or (udp and src port 68 and dst port 67 and src host 0.0.0.0)",
+              filter="udp and dst port 123",
               store=0,
               count=0)
     except OSError as err:
