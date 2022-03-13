@@ -28,6 +28,8 @@ def signal_handler(signal, frame):
 
 
 def arp_display(pkt):
+    log.info(pkt)
+    
     mac = ""
     current_time = datetime.utcnow()
 
