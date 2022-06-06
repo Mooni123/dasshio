@@ -16,9 +16,11 @@ from scapy.all import Ether
 from scapy.all import IP
 from scapy.all import UDP
 from scapy.all import sniff
+from homeassistant.helpers.network import get_url
 
+instance_url = get_url(hass)
 
-BASE_URL = os.environ.get("HA_BASE_URL") or "http://hassio/homeassistant"
+#BASE_URL = os.environ.get("HA_BASE_URL") or "http://hassio/homeassistant"
 
 
 def signal_handler(signal, frame):
@@ -48,7 +50,7 @@ def arp_display(pkt):
             if "url" in button:
                 url_request = button["url"]
             else:
-                url_request = BASE_URL + "/api/services/{0}/{1}".format(
+                url_request = instance_url + "/api/services/{0}/{1}".format(
                     button["domain"].lower(), button["service"].lower())
 
             try:
