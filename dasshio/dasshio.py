@@ -52,7 +52,7 @@ def arp_display(pkt):
             else:
                 url_request = instance_url + "/api/services/{0}/{1}".format(
                     button["domain"].lower(), button["service"].lower())
-
+            logger.info("Using Request-URL: %s" % url_request)
             try:
                 if "url" in button:
                     request = requests.post(url_request,
