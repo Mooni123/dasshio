@@ -33,7 +33,7 @@ To install this add-on, please, follow Home Assistant documentation on how to [I
 
 Amazon has annouced that Dash Buttons will be no longer supported after 2019. In some countries, the configuration of the buttons has been disabled from Amazon's app.
 
-However, there is an alternative method to connect the divice to your wifi network.
+However, there is an alternative method to connect the device to your wifi network.
 
 1. Set the button into configuration mode by pressing the button for 6 seconds.
 2. Connect your laptop to the Wifi SSID that the button generates called `Amazon Configure me`.
